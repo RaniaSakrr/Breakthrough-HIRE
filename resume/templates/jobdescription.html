@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+{% block content%}
+
+<div class="container w-100">
+    <div class="row justify-content-md-center">
+        <div class="col">
+            <br>
+            <form method="post" action="{{ url_for('cvs') }}">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="job_title" id="job_title" placeholder="Enter the job title" required>
+                    <textarea class="form-control" name="desc" id="desc" rows="20" placeholder="Enter Job Description" style="resize: none;" required></textarea>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-secondary float-right" style="background-color: #13c9ca !important;">CVs</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content%}

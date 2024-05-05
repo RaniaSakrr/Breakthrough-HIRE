@@ -1,0 +1,33 @@
+{% extends "base.html"%}
+{% block content%}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">cv_name</th>
+            <th scope="col">skills</th>
+            <th scope="col">phone</th>
+            <th scope="col">email</th>
+            <th scope="col">country</th>
+            <th scope="col">linkedin</th>
+            <th scope="col">Percentage</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in data %}
+        <tr>
+            <th scope="row">{{ loop.index }}</th>
+            <td>{{ i[0] }}</td>
+            <td>{{ i[1] }}</td>
+            <td>{{ i[2] }}</td>
+            <td><a href="mailto:{{ i[3] }}">{{ i[3] }}</a></td> <!-- Email as a link -->
+            <td>{{ i[4] }}</td>
+            <td><a href="{{ i[5] }}">{{ i[5] }}</a></td> <!-- LinkedIn as a link -->
+            <td>{{ i[6] }}</td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content%}

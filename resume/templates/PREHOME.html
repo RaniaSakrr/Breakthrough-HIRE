@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blank Hero Background with Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Define the hero class */
+        .hero {
+            background-color: #37517e; /* White color */
+            height: 650px; /* Adjust padding as needed */
+            justify-content: center;
+            align-items: center;
+            text-align: center; /* Center content horizontally */
+            color: white; /* Text color */
+            font-weight: bold;
+        }
+
+
+        
+        .navbar-nav .nav-link {
+            color: white; /* Link color */
+            font-size: 1.5rem; /* Adjust font size as needed */
+            margin-right: 7px; /* Spacing between links */
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none; /* Remove underline */
+            transition: all 0.5s
+
+        }
+        .btn-get-started {
+            color: white;
+            background-color: #31b0ef;
+            font-family: var(--heading-font);
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: 1px;
+            padding: 10px 28px;
+            border-radius: 50px;
+            transition: 0.5s;
+        }
+
+
+        .btn-get-started:hover {
+            background-color: #257aba;
+        }
+
+        
+
+        .logo img {
+            max-width: 70%;
+            height: auto;
+        }
+
+   
+
+   
+    
+    </style>
+</head>
+<body>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl d-flex align-items-center">
+
+          <a class="logo d-flex align-items-center me-auto">
+            <img src="static\images\logo.png" >
+          </a>
+
+          <nav id="navmenu" class="navbar navbar-expand-lg">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a href="{{ url_for('PREHOME') }}" class="nav-link">Home</a></li>
+            </ul>
+          </nav>
+
+          <a class="btn btn-lg btn-get-started" href="{{ url_for('login') }}">Get Started</a>
+
+        </div>
+    </header>
+    <!-- Hero section with the blank color background -->
+    <div class="hero">
+        <div class="container" style="padding-top: 220px;">
+            <h1 class="display-3">Whether you are a seeker or a recruiter,</h1>
+            <h1 class="display-3 mb-5">we have just what you need</h1>
+            <a class="btn btn-lg btn-get-started" href="{{ url_for('login') }}">Get Started</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center pt-5 mb-5" style="color: #37517e; font-family: serif; font-size: 2.5rem; font-weight: 700;">Features</h2>
+        </div>
+    
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading mb-5 pt-5">Have you recently completed your academic journey and are seeking employment?<span class="text-muted"></span></h2>
+                <p class="lead">If so, our platform is tailored to your needs. We assist in identifying the most 
+                    suitable job titles for you, advancing your job search journey.</p>
+            </div>
+            <div class="col-md-5 mb-5">
+                <img src="static/images/search.jpg" alt="First featurette image" class="img-fluid">
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row featurette pt-5">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading mb-5 pt-5">Are you an HR professional with job vacancies to fill?<span class="text-muted"></span></h2>
+                <p class="lead">If so, our platform is here to assist you. We offer comprehensive job posting services tailored to your specific requirements, connecting you with top talent.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="static/images/vacancy.jpg" alt="Second featurette image" class="img-fluid">
+            </div>
+        </div>
+        
+    </div>
+    
+        
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

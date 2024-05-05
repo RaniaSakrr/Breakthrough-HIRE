@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Upload CV{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+       <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card" style="margin-top: 150px; width: 800px; height: 370px;">
+                <div class="card-body"  style="margin-top: 50px; ">
+                  <h2 class="card-title" style="font-size: 30px; color: #333; text-align: center;">Upload Your CV</h2>
+                  <p  style="padding-right: 190px; margin-top: 35px;">Please select a file to upload:</p>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <div class="alert alert-info" role="alert">
+                                <ul>
+                                    {% for message in messages %}
+                                        <li>{{ message }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                    {% endwith %}
+                    <form method="post" action="/UPLOAD" enctype="multipart/form-data">
+                      <div style="display: block; margin-bottom: 20px;">
+                          <div class="form-group" style="border: 1px solid #ced4da;display: inline-block;">
+                              <input type="file" name="file" class="form-control-file form-control-lg" required>
+                          </div>
+                      </div>
+                      <div style="display: block;">
+                          <button style="margin-top: 30px;" type="submit" class="btn btn-lg custom-button">Upload</button>
+                      </div>
+                  </form>
+                  
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
