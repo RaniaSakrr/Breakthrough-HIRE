@@ -1,21 +1,43 @@
-{% extends "base.html"%}
-{% block content%}
+{% extends "base.html" %}
 
-<div class="container w-100">
-    <div class="row justify-content-md-center">
-        <div class="col">
-            <br>
-            <form method="post" action="{{ url_for('cvs') }}">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="job_title" id="job_title" placeholder="Enter the job title" required>
-                    <textarea class="form-control" name="desc" id="desc" rows="20" placeholder="Enter Job Description" style="resize: none;" required></textarea>
+{% block content %}
+<style>
+    .custom-card {
+        background-color: #f1eeee;
+        padding-top: 10px;
+
+    }
+
+    .card-shadow {
+        box-shadow: 0 4px 5px #682c0b;
+        border-radius: 0.5rem;
+    }
+</style>
+<div class="container">
+    <div class="card custom-card card-shadow">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="../static/images/desc.jpg" alt="Photo" class="img-fluid rounded">
                 </div>
-                <br>
-                <button type="submit" class="btn btn-secondary float-right" style="background-color: #13c9ca !important;">CVs</button>
-            </form>
+                <div class="col-md-8" style="padding-top: 20px;">
+                    <h1 class="card-title text-center" style="color: #682c0b; font-family:Arial, sans-serif;">Submit Your Job Description</h1>
+                    <form method="post" action="{{ url_for('cvs') }}">
+                        <div class="mb-3">
+                            <label for="job_title" class="form-label custom-label">Job Title</label>
+                            <input type="text" class="form-control custom-input" name="job_title" id="job_title" placeholder="Enter the job title" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="desc" class="form-label custom-label">Job Description</label>
+                            <textarea class="form-control custom-input" name="desc" id="desc" rows="10" placeholder="Enter job description" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn custom-btn">Get CVs</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
-
-{% endblock content%}
+{% endblock %}
