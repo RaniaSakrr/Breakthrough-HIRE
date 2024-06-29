@@ -1,9 +1,7 @@
 <a name="readme-top"></a>
 <br />
 <div align="center">
-  <a href="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system">
-    <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/blob/master/resume/static/images/logo_new.png" alt="Logo" width="120" height="120">
-  </a>
+
   
   <h2 align="center">Talented-recruitment-and-skills-analysis-system</h2>
 </div>
