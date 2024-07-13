@@ -46,7 +46,7 @@ But we don't stop there. We're committed to simplifying the hiring process for b
 - If you are a recruiter looking for talented individuals, we can assist you by creating the job description for the position. We will analyze this description and extract the important skills. Then, we will find the best candidates for you and present their biographies.
 
   <div style="text-align: center;">
-    <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/58fc64e1-709c-4d5d-8194-a5175b604dd7" alt="Capture" style="width: 800px; height: auto; margin: 20px 0;">
+    <img src="resume/static/images/descc.jpeg" alt="Capture" style="width: 800px; height: auto; margin: 20px 0;">
   </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
